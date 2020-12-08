@@ -1,0 +1,308 @@
+table {
+  font-family: 'GoogleSans-Regular', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table td {
+  padding: 8px 16px;
+}
+
+table td input {
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #7b68ee;
+  border-radius: 4px;
+  outline: none;
+  background-color: none;
+  position: relative;
+  cursor: pointer;
+}
+
+table td input::after {
+  content: '';
+  display: none;
+}
+
+table td input:checked {
+  background-color: #7b68ee;
+}
+
+table td input:checked:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+table td .edit-button {
+  border: none;
+  outline: none;
+  padding: 4px;
+  background: none;
+}
+
+table td .edit-button svg {
+  height: 20px;
+  width: 20px;
+}
+
+table td .edit-button svg path {
+  fill: #424242;
+}
+
+table td .edit-button:active {
+  -webkit-transition: -webkit-transform 100ms ease-in;
+  transition: -webkit-transform 100ms ease-in;
+  transition: transform 100ms ease-in;
+  transition: transform 100ms ease-in, -webkit-transform 100ms ease-in;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+table td .edit-button:hover {
+  background: #7b68ee;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+table td .edit-button:hover:hover svg path {
+  fill: #fff;
+}
+
+table th {
+  padding: 12px 16px;
+  text-align: left;
+  background-color: #121212;
+  color: #fff;
+}
+
+table th:nth-child(1) {
+  width: 5%;
+}
+
+table th input {
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #7b68ee;
+  border-radius: 4px;
+  outline: none;
+  background-color: none;
+  position: relative;
+  cursor: pointer;
+}
+
+table th input::after {
+  content: '';
+  display: none;
+}
+
+table th input:checked {
+  background-color: #7b68ee;
+}
+
+table th input:checked:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+table th input:indeterminate {
+  background-color: #7b68ee;
+}
+
+table th input:indeterminate:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 8px;
+  height: 2px;
+  border: solid white;
+  border-width: 1px;
+}
+
+table tr:nth-child(even) {
+  background-color: #fff;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  background: #f4f4fb;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.pagination .details {
+  font-family: 'GoogleSans-Bold', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.pagination .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination .controls button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.pagination .controls button svg {
+  height: 30px;
+  width: 30px;
+}
+
+.pagination .controls button svg path {
+  fill: #7b68ee;
+}
+
+.pagination .controls button:disabled {
+  cursor: not-allowed;
+}
+
+.pagination .controls button:disabled svg path {
+  fill: #7c68ee75;
+}
+
+.toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.toolbar .table-filter {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #f4f4fb;
+  border-radius: 100px;
+}
+
+.toolbar .table-filter svg {
+  height: 20px;
+}
+
+.toolbar .table-filter svg path {
+  fill: #424242;
+}
+
+.toolbar .table-filter input {
+  padding: 0 12px;
+  outline: none;
+  border: none;
+  font-family: 'Axiforma-Regular', Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #424242;
+  width: 100%;
+}
+
+.toolbar button {
+  background: #7b68ee;
+  border: 2px solid #7b68ee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 16px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-family: 'Axiforma-Regular', arial, serif;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+}
+
+.toolbar button svg {
+  height: 20px;
+}
+
+.toolbar button svg path {
+  fill: #fff;
+}
+
+.toolbar button:active {
+  -webkit-transition: -webkit-transform 100ms ease-in;
+  transition: -webkit-transform 100ms ease-in;
+  transition: transform 100ms ease-in;
+  transition: transform 100ms ease-in, -webkit-transform 100ms ease-in;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=table.css.map */
